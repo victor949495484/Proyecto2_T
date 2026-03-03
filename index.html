@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechConsult</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #050505;
+            overflow-x: hidden;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #60a5fa, #a78bfa);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glow-button {
+            box-shadow: 0 0 20px rgba(96, 165, 250, 0.4);
+        }
+
+        #modal {
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Efecto suave para las fotos del equipo */
+        .team-img {
+            object-fit: cover;
+            filter: grayscale(20%);
+            transition: all 0.4s ease;
+        }
+
+        .team-card:hover .team-img {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body class="text-gray-200">
+
+    <nav class="fixed w-full z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg rotate-12"></div>
+                <span class="text-xl font-bold tracking-tighter text-white">Tech<span
+                        class="text-blue-500">Consult</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="#inicio" class="hover:text-blue-400 transition">Inicio</a>
+                <a href="#servicios" class="hover:text-blue-400 transition">Servicios</a>
+                <a href="#equipo" class="hover:text-blue-400 transition">Equipo</a>
+                <a href="#contacto" class="hover:text-blue-400 transition text-blue-400 font-bold">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" data-aos="zoom-out-down"
+        class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute top-1/4 -left-20 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-purple-600/20 rounded-full blur-[120px]"></div>
+
+        <div class="relative z-10 text-center px-4">
+            <span
+                class="inline-block py-1 px-3 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-bold mb-6 tracking-widest uppercase"
+                data-aos="fade-down">
+                Expertos en el Futuro Digital
+            </span>
+            <h1 class="text-6xl md:text-8xl font-extrabold mb-6 tracking-tighter text-white" data-aos="fade-up"
+                data-aos-delay="200">
+                Diseñamos tu <br> <span class="text-gradient">Éxito Digital.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed" data-aos="fade-up"
+                data-aos-delay="400">
+                Transformamos empresas tradicionales en líderes tecnológicos mediante software a medida y estrategias de
+                datos.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="600">
+                <a href="#servicios"
+                    class="glow-button bg-blue-600 hover:bg-blue-500 px-10 py-4 rounded-full font-bold transition-all transform hover:scale-105">
+                    Información
+                </a>
+                <a href="#contacto" class="glass px-10 py-4 rounded-full font-bold hover:bg-white/5 transition">
+                    Hablemos ahora
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="servicios" data-aos="zoom-out-down" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20" data-aos="fade-right">
+                <h2 class="text-4xl font-bold mb-4 text-white">Servicios Digitales</h2>
+                <p class="text-gray-500 uppercase tracking-widest text-sm font-semibold">Tecnología de última generación
+                </p>
+            </div>
+            <div id="grid-servicios" class="grid md:grid-cols-3 gap-6"></div>
+        </div>
+    </section>
+
+    <section id="equipo" data-aos="zoom-out-down" class="py-32 px-6 bg-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4 text-white">Nuestro Equipo</h2>
+                <p class="text-gray-400">Las mentes detrás de la transformación digital.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center team-card" data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-32 h-32 rounded-2xl mx-auto mb-6 overflow-hidden rotate-3 hover:rotate-0 transition-all duration-300 border-2 border-blue-500/30">
+                        <img src="adrian.jpeg" alt="Adrián Garde" class="team-img w-full h-full">
+                    </div>
+                    <h4 class="font-bold text-white">Adrián Garde</h4>
+                    <p class="text-sm text-blue-400">Programador Backend</p>
+                </div>
+
+                <div class="text-center team-card" data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-32 h-32 rounded-2xl mx-auto mb-6 overflow-hidden -rotate-3 hover:rotate-0 transition-all duration-300 border-2 border-purple-500/30">
+                        <img src="victor.jpeg" alt="Victor Garcia" class="team-img w-full h-full">
+                    </div>
+                    <h4 class="font-bold text-white">Victor Garcia</h4>
+                    <p class="text-sm text-blue-400">Programador Backend</p>
+                </div>
+
+                <div class="text-center team-card" data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-32 h-32 rounded-2xl mx-auto mb-6 overflow-hidden rotate-6 hover:rotate-0 transition-all duration-300 border-2 border-cyan-500/30">
+                        <img src="julio1.jpeg" alt="Julio Góngora" class="team-img w-full h-full">
+                    </div>
+                    <h4 class="font-bold text-white">Julio Góngora</h4>
+                    <p class="text-sm text-blue-400">Programador Web</p>
+                </div>
+
+                <div class="text-center team-card" data-aos="fade-up" data-aos-delay="400">
+                    <div
+                        class="w-32 h-32 rounded-2xl mx-auto mb-6 overflow-hidden -rotate-6 hover:rotate-0 transition-all duration-300 border-2 border-indigo-500/30">
+                        <img src="santi.jpeg" alt="Santiago Fernández" class="team-img w-full h-full">
+                    </div>
+                    <h4 class="font-bold text-white">Santiago Fernández</h4>
+                    <p class="text-sm text-blue-400">UX Design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-md p-4">
+        <div class="glass max-w-lg w-full p-10 rounded-3xl relative animate-in fade-in zoom-in duration-300">
+            <button onclick="closeModal()"
+                class="absolute top-5 right-5 text-gray-400 hover:text-white text-2xl">✕</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <section id="contacto" class="py-32 px-6 overflow-hidden">
+        <div class="max-w-3xl mx-auto glass p-12 rounded-3xl text-center border-white/10" data-aos="zoom-out-down">
+
+            <h2 class="text-3xl font-bold mb-6 text-white" data-aos="fade-up" data-aos-delay="200">
+                ¿Listo para unirte a nosotros?
+            </h2>
+
+            <p class="text-gray-400 mb-8 text-lg" data-aos="fade-up" data-aos-delay="300">
+                Contáctanos para empezar tu transformación.
+            </p>
+
+            <form id="contactForm" class="flex flex-col gap-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="relative">
+                    <input type="email" id="emailInput" required placeholder="Tu correo electrónico"
+                        class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-blue-500 transition text-white">
+                </div>
+
+                <button type="submit"
+                    class="bg-white text-black font-bold py-4 rounded-xl hover:bg-blue-400 hover:text-white transition-all uppercase tracking-tighter transform hover:scale-[1.02]">
+                    Enviar Solicitud
+                </button>
+            </form>
+
+        </div>
+    </section>
+
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: false,
+            mirror: true
+        });
+
+        // 1. Definimos los datos iniciales (como objeto JS)
+        const serviciosBackup = [
+            {
+                titulo: "Identidad Corporativa",
+                desc: "Estrategas Digitales de Alto Impacto.",
+                concepto: "Somos una firma de consultoría tecnológica líder en el diseño y ejecución de arquitecturas digitales avanzadas. Nos definimos por una capacidad analítica superior para transformar desafíos operativos complejos en soluciones de software robustas, escalables y orientadas a resultados. Nuestra identidad se fundamenta en la convergencia entre el conocimiento técnico especializado y una visión de negocio global, permitiéndonos ofrecer soluciones que no solo resuelven problemas actuales, sino que anticipan las demandas tecnológicas del futuro.",
+                icon: "🧠"
+            },
+            {
+                titulo: "Propósito Estratégico",
+                desc: "Impulsando la Competitividad en la Era Global.",
+                concepto: "Nuestro propósito fundamental consiste en potenciar el valor de nuestros clientes a través de la integración inteligente de tecnologías de vanguardia. Aspiramos a consolidarnos como el socio tecnológico estratégico indispensable que faculta a las organizaciones para liderar el cambio en un entorno digitalizado y altamente volátil. Mediante la innovación constante, garantizamos que cada empresa bajo nuestra asesoría disponga de las herramientas necesarias para alcanzar una ventaja competitiva sostenible y una madurez digital de primer nivel.",
+                icon: "🌐"
+            },
+            {
+                titulo: "Excelencia Metodológica",
+                desc: "Acompañamiento Integral y Rigor Técnico.",
+                concepto: "Implementamos un enfoque consultivo basado en los pilares de la excelencia técnica y la agilidad operativa. Nuestra metodología de trabajo inicia con un análisis exhaustivo de cada modelo de negocio, permitiéndonos diseñar una hoja de ruta personalizada que abarca desde la consultoría inicial y el despliegue de infraestructura, hasta el soporte crítico y el mantenimiento evolutivo. Este compromiso 360° asegura una trazabilidad total en los proyectos, garantizando que la tecnología se mantenga siempre alineada con los objetivos corporativos más ambiciosos.",
+                icon: "📈"
+            }
+        ];
+
+        let serviciosData = [];
+        const container = document.getElementById('grid-servicios');
+        const modal = document.getElementById('modal');
+        const modalContent = document.getElementById('modal-content');
+
+        // 2. FUNCIÓN PARA CARGAR DESDE JSON O DESDE OBJETO JS
+        async function cargarServicios() {
+            try {
+                // Intentamos cargar el archivo JSON externo
+                const response = await fetch('servicios.json');
+                if (!response.ok) throw new Error("No se encontró el archivo JSON");
+                serviciosData = await response.json();
+                console.log("Servicios cargados desde JSON");
+            } catch (error) {
+                // Si falla (ej: abres el archivo localmente), usamos el objeto JS
+                console.warn("Cargando desde objeto JS interno (Fallback)");
+                serviciosData = serviciosBackup;
+            }
+            renderServicios();
+        }
+
+        // 3. FUNCIÓN PARA DIBUJAR LOS ELEMENTOS EN EL HTML
+        function renderServicios() {
+            container.innerHTML = ""; // Limpiar contenedor
+            serviciosData.forEach((s, index) => {
+                const div = document.createElement('div');
+                div.className = "glass p-10 rounded-3xl hover:border-blue-500/50 transition-all group cursor-pointer";
+                div.setAttribute('data-aos', 'fade-up');
+                div.setAttribute('data-aos-delay', (index * 200).toString());
+
+                div.onclick = () => openModal(index);
+                div.innerHTML = `
+                    <div class="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">${s.icon}</div>
+                    <h3 class="text-xl font-bold mb-4 text-white">${s.titulo}</h3>
+                    <p class="text-gray-400 leading-relaxed">${s.desc}</p>
+                    <div class="mt-6 text-blue-400 font-bold text-sm opacity-60 group-hover:opacity-100 transition-opacity">Saber más →</div>
+                `;
+                container.appendChild(div);
+            });
+            // Refrescar AOS para que las nuevas tarjetas tengan animación
+            AOS.refresh();
+        }
+
+        function openModal(index) {
+            const s = serviciosData[index];
+            modalContent.innerHTML = `
+                <div class="text-5xl mb-6">${s.icon}</div>
+                <h3 class="text-3xl font-bold mb-4 text-white">${s.titulo}</h3>
+                <p class="text-gray-300 text-lg leading-relaxed mb-6">${s.concepto}</p>
+                <button onclick="closeModal()" class="w-full bg-blue-600 py-3 rounded-xl font-bold hover:bg-blue-500 transition">Entendido</button>
+            `;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const email = document.getElementById('emailInput').value;
+            modalContent.innerHTML = `
+                <div class="text-6xl mb-6 text-center">✅</div>
+                <h3 class="text-3xl font-bold mb-4 text-white text-center">¡Enviado!</h3>
+                <p class="text-gray-300 text-lg leading-relaxed mb-6 text-center">
+                    Hemos recibido tu solicitud desde <span class="text-blue-400 font-bold">${email}</span>.
+                </p>
+                <button onclick="closeModal()" class="w-full bg-blue-600 py-3 rounded-xl font-bold hover:bg-blue-500 transition">Genial</button>
+            `;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+            this.reset();
+        });
+
+        modal.onclick = (e) => {
+            if (e.target === modal) closeModal();
+        };
+
+        // Ejecutar la carga al iniciar la página
+        document.addEventListener('DOMContentLoaded', cargarServicios);
+    </script>
+
+    <footer class="py-10 text-center text-gray-600 border-t border-white/5">
+        <p>© 2026 TechConsult. Proyecto Final Consultoría IT.</p>
+    </footer>
+
+</body>
+
+</html>
