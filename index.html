@@ -164,6 +164,9 @@
         </div>
     </section>
 
+
+    
+
     <div id="modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-md p-4">
         <div class="glass max-w-lg w-full p-10 rounded-3xl relative animate-in fade-in zoom-in duration-300">
             <button onclick="closeModal()"
@@ -183,9 +186,19 @@
                 Contáctanos para empezar tu transformación.
             </p>
 
-            <form id="contactForm" class="flex flex-col gap-4" data-aos="fade-up" data-aos-delay="400">
+           <form id="contactForm" class="flex flex-col gap-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="relative">
+                    <input type="text" id="nameInput" required placeholder="Nombre completo"
+                        class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-blue-500 transition text-white">
+                </div>
+
                 <div class="relative">
                     <input type="email" id="emailInput" required placeholder="Tu correo electrónico"
+                        class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-blue-500 transition text-white">
+                </div>
+
+                <div class="relative">
+                    <input type="tel" id="phoneInput" required placeholder="Número de teléfono"
                         class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-blue-500 transition text-white">
                 </div>
 
