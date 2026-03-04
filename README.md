@@ -2,12 +2,12 @@
 
 
 
-🚀 TechConsult - Consultoría Digital de Alto Impacto
+TechConsult - Consultoría Digital de Alto Impacto
 TechConsult es una landing page premium diseñada para firmas de consultoría tecnológica que buscan una presencia digital robusta, moderna y minimalista. Este proyecto combina un diseño "Dark Mode" elegante con efectos visuales avanzados y una arquitectura técnica ligera.
 
 
 
-✨ Características Principales
+Características Principales
 Diseño Glassmorphism: Interfaz ultra-moderna con efectos de desenfoque y transparencias (Blur & Glass effects).
 
 Animaciones Dinámicas: Integración de la librería AOS.js para revelados suaves al hacer scroll.
@@ -22,7 +22,7 @@ Componentes Interactivos: Modales personalizados, formularios validados y efecto
 
 
 
-🛠️ Stack Tecnológico
+Stack Tecnológico
 Frontend: HTML5, CSS3 (Custom Styles).
 
 Framework CSS: Tailwind CSS & DaisyUI.
@@ -35,7 +35,7 @@ Lógica: JavaScript Vanilla (ES6+) para manipulación del DOM y simulación de d
 
 
 
-📊 Dashboard de Estadísticas
+Dashboard de Estadísticas
 El sitio incluye una sección de métricas vivas que simula el crecimiento de la empresa en tiempo real:
 
 Planes adquiridos: Contador incremental.
@@ -46,7 +46,7 @@ Registros: Monitor de variaciones diarias con feedback visual (verde/rojo).
 
 
 
-👨‍💻 Equipo (Contributors)
+Equipo (Contributors)
 Adrián Garde - Programador Backend
 
 Victor Garcia - Programador Backend
