@@ -57,5 +57,5 @@ Julio Góngora - Programador Web
 
 Santiago Fernández - UX Design
 
-📄 Licencia
+Licencia
 Este proyecto está bajo la Licencia MIT - puedes usarlo libremente para tus propios fines.
